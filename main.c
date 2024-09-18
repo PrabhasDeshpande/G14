@@ -97,7 +97,7 @@ void GPIO_PORTF_Handler(void)
             delay(25,clock);                   // arg1 is required delay in ms
             int state1 = GPIO_PORTF_DATA_R;
 
-            if(state0 != state1){                // to counter debouncing
+            if(state0 != state1){                // for  debouncing
 
             GPIO_PORTF_DATA_R ^= (0x02);     // turn on led
             //GPIO_PORTF_ICR_R |= (1<<0);     // int cleared ??: not required for level sensitive stuff
